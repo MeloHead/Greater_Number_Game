@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GREAT NUMBER GAME</title>
+    {%load static%}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    
+</head>
+
+
+<body>
+    <div id='container'>
+        <h1>Welcome to the GREATER Number Game</h1>
+        <h3>I am thinking between a number between 1 & 100</h3>
+        <h4>What number am I guessing?!</h4>
+        <form action="/start_game" method="GET">
+            {% csrf_token %}
+            <input type="text" class='text' name='user_guess'>
+            <p><button type='submit'>Submit</button></p>    
+        </form>
+        <button><a href="/delete">Delete</a></button>
+        <p>your random number is {{userGuess}}</p> 
+        <p>The number you have chosen is {{outcome1}}</p>
+    </div>
+    </body>
+</html>

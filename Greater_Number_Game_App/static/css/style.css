@@ -1,0 +1,14 @@
+
+body *{
+    border:1px dotted red;
+}
+
+body{
+    background-color: black;
+}
+
+#container{
+    background-color: white;
+    text-align: center;
+    width:970px
+}
